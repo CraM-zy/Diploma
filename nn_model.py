@@ -358,9 +358,8 @@ if __name__ == "__main__":
             })
 
             rdf['systemDemand'] = rdf['systemDemand'].round()
-            rdf['manualDemand'] = 0
             rdf['safetyStock'] = 0
 
-            rdf.to_csv('nn_model.csv')
+            #rdf.to_csv('nn_model.csv')
 
         print()
