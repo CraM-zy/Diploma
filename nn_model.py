@@ -323,7 +323,7 @@ if __name__ == "__main__":
     best_score = test_model(test_loader, model)
     print()
 
-    for ix_epoch in range(50):
+    for ix_epoch in range(20):
         print(f"Epoch {ix_epoch}\n---------")
         train_model(train_loader, model, loss_function, optimizer=optimizer)
         score = test_model(test_loader, model)
