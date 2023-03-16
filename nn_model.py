@@ -286,6 +286,7 @@ if __name__ == "__main__":
     df['wind_speed'] = np.log1p(df['wind_speed'].fillna(method="ffill").fillna(method="bfill"))
     df['pressure'] = (df['pressure'] - 950).fillna(method="ffill").fillna(method="bfill") / 100
     df['value'] = np.log1p(df['value'])
+    df = df.fillna(0)
 
     df_train = df.loc[:train_end].copy()
     df_test = df.loc[test_start:].copy()
